@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Converter</h1>
+	<input type="text" id="id1" placeholder="Minutes Value"><br>
+	<button onclick="Seconds()">Convert to Seconds</button>
+	<p id="secs"></p>
+
+	<input type="number" id="id2" placeholder="Minutes Value"><br>
+	<button onclick="Hours()">Convert to Hours</button>
+	<p id="hrs"></p>
+
+	<input type="number" id="id3" placeholder="Minutes Value"><br>
+	<button onclick="Days()">Convert to Days</button>
+	<p id="day"></p>
+
+	<script>
+		function Seconds() {
+			var x = document.getElementById('id1').value;
+			var secs = x * 60;
+			document.getElementById('secs').innerHTML = "The answer is " + secs + " Seconds.";
+		}
+
+		function Hours() {
+			var x = document.getElementById('id2').value;
+			var hrs = x * 0.0166667;
+			document.getElementById('hrs').innerHTML = "The answer is " + hrs + " Hours.";
+		}
+
+		function Days() {
+			var x = document.getElementById('id3').value;
+			var day = x * 0.000694444;
+			document.getElementById('day').innerHTML = "The answer is " + day + " Days.";
+		}
+	</script>
+</body>
+</html>
